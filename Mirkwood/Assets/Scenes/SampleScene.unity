@@ -4521,6 +4521,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stela_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5628518576035179473, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: variableName
+      value: Stela2Active
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stella2Active"] == true
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1c0cb760f1d39b45a4d851c5753cb31, type: 3}
 --- !u!1001 &6583857063517330890
@@ -4612,8 +4627,28 @@ PrefabInstance:
       objectReference: {fileID: 1483135484}
     - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
         type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: condition.questConditions.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stella1Active"] == true
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
       propertyPath: onExecute.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: condition.questConditions.Array.data[0].checkQuestEntry
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
         type: 3}

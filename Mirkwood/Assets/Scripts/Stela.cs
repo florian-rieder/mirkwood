@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Easing;
+using PixelCrushers.DialogueSystem;
 
 public class Stela : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Stela : MonoBehaviour
 
     private bool collected = false;
     public bool Collected  { get => this.collected; }
+
+    [SerializeField] private string variableName = "Stela1Active";
 
     
     private Color startEmissionColor;
@@ -21,6 +24,8 @@ public class Stela : MonoBehaviour
     public void Activate(bool value)
     {
         active = value;
+        DialogueLua.SetVariable(variableName, value);
+        Debug.Log(DialogueLua.GetVariable(variableName).AsBool);
     }
 
     Renderer rend;
@@ -44,7 +49,7 @@ public class Stela : MonoBehaviour
             float t = Mathf.Clamp01(elapsedTime / duration);
             float intensity = Ease.QuadInOut(startIntensity, endIntensity, t);
             SetEmission(startEmissionColor, intensity);
-            Debug.Log(intensity);
+            //Debug.Log(intensity);
         }
     }
 
