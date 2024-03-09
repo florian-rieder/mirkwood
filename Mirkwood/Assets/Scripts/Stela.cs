@@ -14,7 +14,6 @@ public class Stela : MonoBehaviour
 
     [SerializeField] private string variableName = "Stela1Active";
 
-    
     private Color startEmissionColor;
     [SerializeField] private float startIntensity = 0f;
     [SerializeField] private float endIntensity = 5f;
@@ -56,6 +55,8 @@ public class Stela : MonoBehaviour
     public void Disappear()
     {
         gameObject.SetActive(false);
+
+        MusicController.Instance.Crossfade();
         // TODO: Spawn indicator of direction of the next stela
     }
 
