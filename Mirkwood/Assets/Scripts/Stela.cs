@@ -48,6 +48,12 @@ public class Stela : MonoBehaviour
         }
     }
 
+    public void Disappear()
+    {
+        gameObject.SetActive(false);
+        // TODO: Spawn indicator of direction of the next stela
+    }
+
     void SetEmission(Color color, float intensity)
     {
         // Create a new color with specified intensity

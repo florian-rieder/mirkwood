@@ -4610,6 +4610,26 @@ PrefabInstance:
       propertyPath: conversationConversant
       value: 
       objectReference: {fileID: 1483135484}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: onExecute.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: onExecute.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: onExecute.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7840438995090784532}
+    - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: onExecute.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1c0cb760f1d39b45a4d851c5753cb31, type: 3}
 --- !u!114 &7840438995090784532 stripped
