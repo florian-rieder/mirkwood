@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using Easing;
 using PixelCrushers.DialogueSystem;
+using Cysharp.Threading.Tasks;
 
 public class Stela : MonoBehaviour
 {
@@ -19,6 +21,10 @@ public class Stela : MonoBehaviour
     [SerializeField] private float startIntensity = 0f;
     [SerializeField] private float endIntensity = 5f;
     [SerializeField] private float duration = 1f;
+    [SerializeField] private AudioSource shimmerAudio;
+    [SerializeField] private GameObject vanishAudioPrefab;
+    private bool fading = false;
+    float fadeDuration = 0.5f;
 
 
     Renderer rend;
@@ -30,6 +36,7 @@ public class Stela : MonoBehaviour
         active = value;
         DialogueLua.SetVariable(variableName, value);
         //Debug.Log(DialogueLua.GetVariable(variableName).AsBool);
+        shimmerAudio.Play();
     }
 
     void Start()
@@ -70,14 +77,25 @@ public class Stela : MonoBehaviour
         }
     }
 
-    public void Disappear()
+    public async void Disappear()
     {
-        gameObject.SetActive(false);
-
         MusicController.Instance.Crossfade();
 
         StelaManager.Instance.ActivateNextStela();
+        
+        await FadeShimmer();
+
+        var vanishAudio = Instantiate(vanishAudioPrefab).GetComponent<AudioSource>();
+        vanishAudio.Play();
+
+        // Spawn particles here
         // TODO: Spawn indicator of direction of the next stela
+
+
+        await UniTask.Delay(TimeSpan.FromSeconds(1.6f), ignoreTimeScale: false);
+
+        
+        gameObject.SetActive(false);
     }
 
     void SetEmission(Color color, float intensity)
@@ -90,5 +108,23 @@ public class Stela : MonoBehaviour
 
         // Enable emission on the material
         //rend.material.EnableKeyword("_EMISSION");
+    }
+
+    IEnumerator FadeShimmer()
+    {
+        fading = true;
+
+        float timer = 0;
+        float volume = shimmerAudio.volume;
+
+        while (timer < fadeDuration)
+        {
+            float t = timer / fadeDuration;
+            shimmerAudio.volume = Mathf.Pow(10, Mathf.Lerp(Mathf.Log10(volume), Mathf.Log10(0.001f), t));
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        fading = false;
     }
 }
