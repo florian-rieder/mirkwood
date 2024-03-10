@@ -45,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825374369954597318}
-  m_Mesh: {fileID: -1364087873485794358, guid: b6b2fc8bfeca68a43a6da8e670ee92d4, type: 3}
+  m_Mesh: {fileID: 6772188863480790410, guid: 09d205ab007ce374299bf7dc4f8d9ec5, type: 3}
 --- !u!23 &1185763839509309459
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -269,6 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5dd54fae6284b14db495b71bd7726b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variableName: Stela1Active
   startIntensity: 0
   endIntensity: 5
   duration: 1
+  emissiveMaterialName: SteleGlow

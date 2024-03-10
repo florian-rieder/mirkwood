@@ -99,7 +99,7 @@ MonoBehaviour:
   - id: 2
     fields:
     - title: Name
-      value: Stella1Active
+      value: Stela1Active
       type: 0
       typeString: 
     - title: Initial Value
@@ -113,11 +113,11 @@ MonoBehaviour:
   - id: 3
     fields:
     - title: Name
-      value: Stella2Active
+      value: Stela2Active
       type: 0
       typeString: 
     - title: Initial Value
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -127,7 +127,7 @@ MonoBehaviour:
   - id: 4
     fields:
     - title: Name
-      value: Stella3Active
+      value: Stela3Active
       type: 0
       typeString: 
     - title: Initial Value
@@ -141,7 +141,7 @@ MonoBehaviour:
   - id: 5
     fields:
     - title: Name
-      value: Stella4Active
+      value: Stela4Active
       type: 0
       typeString: 
     - title: Initial Value
@@ -155,7 +155,7 @@ MonoBehaviour:
   - id: 6
     fields:
     - title: Name
-      value: Stella5Active
+      value: Stela5Active
       type: 0
       typeString: 
     - title: Initial Value
@@ -169,7 +169,7 @@ MonoBehaviour:
   - id: 7
     fields:
     - title: Name
-      value: Stella6Active
+      value: Stela6Active
       type: 0
       typeString: 
     - title: Initial Value
