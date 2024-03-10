@@ -14,27 +14,45 @@ public class Stela : MonoBehaviour
 
     [SerializeField] private string variableName = "Stela1Active";
 
+    Material emissiveMaterial; // Reference to the emissive material
     private Color startEmissionColor;
     [SerializeField] private float startIntensity = 0f;
     [SerializeField] private float endIntensity = 5f;
     [SerializeField] private float duration = 1f;
 
 
+    Renderer rend;
+    [SerializeField] private string emissiveMaterialName = "SteleGlow"; // Name of the emissive material
+    float elapsedTime = 0f;
+
     public void Activate(bool value)
     {
         active = value;
         DialogueLua.SetVariable(variableName, value);
-        Debug.Log(DialogueLua.GetVariable(variableName).AsBool);
+        //Debug.Log(DialogueLua.GetVariable(variableName).AsBool);
     }
-
-    Renderer rend;
-    float elapsedTime = 0f;
 
     void Start()
     {
         rend = GetComponent<Renderer>();
 
-        startEmissionColor = rend.materials[1].GetColor("_EmissionColor");
+        // Find the emissive material by name
+        foreach (Material mat in rend.materials)
+        {
+            if (mat.name.Contains(emissiveMaterialName))
+            {
+                emissiveMaterial = mat;
+                break;
+            }
+        }
+
+        if (emissiveMaterial == null)
+        {
+            Debug.LogError("Emissive material not found!");
+            return;
+        }
+
+        startEmissionColor = emissiveMaterial.GetColor("_EmissionColor");
 
         // Set the initial emission color and intensity
         SetEmission(startEmissionColor, startIntensity);
@@ -66,7 +84,7 @@ public class Stela : MonoBehaviour
         Color finalColor = color * intensity;
 
         // Set the emission color of the material
-        rend.materials[1].SetColor("_EmissionColor", finalColor);
+        emissiveMaterial.SetColor("_EmissionColor", finalColor);
 
         // Enable emission on the material
         //rend.material.EnableKeyword("_EMISSION");

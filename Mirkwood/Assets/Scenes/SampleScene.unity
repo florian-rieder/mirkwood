@@ -622,7 +622,6 @@ MonoBehaviour:
   introMusic: {fileID: 148099990}
   bodyMusic: {fileID: 148099989}
   crossfadeDuration: 2
-  crossfaded: 0
 --- !u!1 &301525550
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +982,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 0.37
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1026,7 +1025,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 13740
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -4739,6 +4738,11 @@ PrefabInstance:
       propertyPath: variableName
       value: Stela2Active
       objectReference: {fileID: 0}
+    - target: {fileID: 5628518576035179473, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: emissiveMaterialName
+      value: SteleGlow
+      objectReference: {fileID: 0}
     - target: {fileID: 6583857062269428858, guid: f1c0cb760f1d39b45a4d851c5753cb31,
         type: 3}
       propertyPath: condition.luaConditions.Array.size
@@ -4817,6 +4821,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stela_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628518576035179473, guid: f1c0cb760f1d39b45a4d851c5753cb31,
+        type: 3}
+      propertyPath: emissiveMaterialName
+      value: SteleGlow
       objectReference: {fileID: 0}
     - target: {fileID: 6583857062269428837, guid: f1c0cb760f1d39b45a4d851c5753cb31,
         type: 3}
