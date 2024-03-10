@@ -37,6 +37,12 @@ public class StelaManager : MonoBehaviour
     public void ActivateNextStela()
     {
         currentStela = ChooseNextStela();
+
+        if (currentStela == null) {
+            // TODO: End the game or something...
+            return;
+        }
+
         currentStela.Activate(true);
     }
 
