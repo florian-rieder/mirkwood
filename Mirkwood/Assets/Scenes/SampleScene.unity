@@ -1531,6 +1531,11 @@ PrefabInstance:
       propertyPath: conversationConversant
       value: 
       objectReference: {fileID: 1253877005}
+    - target: {fileID: 5939087885754860102, guid: 9bdb839d050f59549b3bb793f61d5f65,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stela2Active"] == true
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bdb839d050f59549b3bb793f61d5f65, type: 3}
 --- !u!114 &538392142 stripped

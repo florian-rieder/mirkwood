@@ -75,6 +75,8 @@ public class Stela : MonoBehaviour
         gameObject.SetActive(false);
 
         MusicController.Instance.Crossfade();
+
+        StelaManager.Instance.ActivateNextStela();
         // TODO: Spawn indicator of direction of the next stela
     }
 
