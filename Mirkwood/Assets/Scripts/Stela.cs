@@ -95,7 +95,9 @@ public class Stela : MonoBehaviour
         // TODO: Spawn indicator of direction of the next stela
 
 
-        await UniTask.Delay(TimeSpan.FromSeconds(1.6f), ignoreTimeScale: false);
+        await UniTask.Delay(TimeSpan.FromSeconds(1.8f), ignoreTimeScale: false);
+
+        await Ease3.GoScaleTo(this, Vector3.zero, 1.6f, null, null, EaseType.ExpoIn);
 
         
         gameObject.SetActive(false);
