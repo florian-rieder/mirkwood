@@ -8,6 +8,8 @@ public class CanvasFader : MonoBehaviour
     public CanvasGroup canvasGroup;
     public float fadeDuration = 1f;
 
+    [SerializeField] private EndCards endCards;
+
     private bool isFading = false;
 
     // Call this function to start the fade-in effect
@@ -17,6 +19,8 @@ public class CanvasFader : MonoBehaviour
         {
             await FadeCanvasGroup(canvasGroup, canvasGroup.alpha, 1f, fadeDuration);
         }
+
+        await endCards.LaunchEndCards();
     }
 
     // Coroutine for fading the canvas group
