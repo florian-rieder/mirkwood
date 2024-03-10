@@ -39,7 +39,8 @@ public class StelaManager : MonoBehaviour
         currentStela = ChooseNextStela();
 
         if (currentStela == null) {
-            // TODO: End the game or something...
+            // End the game or something...
+            GameController.Instance.EndGame();
             return;
         }
 

@@ -86,6 +86,9 @@ public class Stela : MonoBehaviour
         await FadeShimmer();
 
         var vanishAudio = Instantiate(vanishAudioPrefab).GetComponent<AudioSource>();
+        Vector3 currPos = transform.position;
+        currPos.y = 1.5f;
+        vanishAudio.transform.position = currPos;
         vanishAudio.Play();
 
         // Spawn particles here
