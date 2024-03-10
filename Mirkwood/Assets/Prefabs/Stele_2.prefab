@@ -107,7 +107,6 @@ MonoBehaviour:
   trigger: 32
   condition:
     luaConditions:
-    - Variable["Stela2Active"] == true
     - Variable["Stela2Finished"] == false
     questConditions: []
     acceptedTags: []
@@ -144,7 +143,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 1
+  conversation: New Conversation 5
   conversationConversant: {fileID: 2792659508216695083}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1

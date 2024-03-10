@@ -107,7 +107,6 @@ MonoBehaviour:
   trigger: 32
   condition:
     luaConditions:
-    - Variable["Stela1Active"] == true
     - Variable["Stela1Finished"] == false
     questConditions: []
     acceptedTags: []
