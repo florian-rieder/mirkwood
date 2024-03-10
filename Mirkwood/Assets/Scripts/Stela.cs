@@ -87,18 +87,17 @@ public class Stela : MonoBehaviour
 
         var vanishAudio = Instantiate(vanishAudioPrefab).GetComponent<AudioSource>();
         Vector3 currPos = transform.position;
-        currPos.y = 1.5f;
         vanishAudio.transform.position = currPos;
         vanishAudio.Play();
 
         // Spawn particles here
         // TODO: Spawn indicator of direction of the next stela
 
-
         await UniTask.Delay(TimeSpan.FromSeconds(1.8f), ignoreTimeScale: false);
 
         await Ease3.GoScaleTo(this, Vector3.zero, 1.6f, null, null, EaseType.ExpoIn);
 
+        await UniTask.Delay(TimeSpan.FromSeconds(0.5f), ignoreTimeScale: false);
 
         gameObject.SetActive(false);
     }

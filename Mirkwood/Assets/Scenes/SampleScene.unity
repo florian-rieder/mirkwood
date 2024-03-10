@@ -773,6 +773,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.509
       objectReference: {fileID: 0}
+    - target: {fileID: 3225199711282573695, guid: be48b48bd3ce8dc40bd9a9b581568287,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225199711282573695, guid: be48b48bd3ce8dc40bd9a9b581568287,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stela6Finished"] == true
+      objectReference: {fileID: 0}
     - target: {fileID: 3281529468592575377, guid: be48b48bd3ce8dc40bd9a9b581568287,
         type: 3}
       propertyPath: m_Name
@@ -787,6 +797,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MinDistance
       value: 1.0008192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939087885754860102, guid: be48b48bd3ce8dc40bd9a9b581568287,
+        type: 3}
+      propertyPath: luaCode
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5939087885754860102, guid: be48b48bd3ce8dc40bd9a9b581568287,
         type: 3}
@@ -2650,9 +2665,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5939087885754860102, guid: c1241dcedd505df4ca5de5525af3fc04,
         type: 3}
+      propertyPath: luaCode
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939087885754860102, guid: c1241dcedd505df4ca5de5525af3fc04,
+        type: 3}
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 1502456608}
+    - target: {fileID: 6895385409292387033, guid: c1241dcedd505df4ca5de5525af3fc04,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895385409292387033, guid: c1241dcedd505df4ca5de5525af3fc04,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stela5Finished"] == true
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1241dcedd505df4ca5de5525af3fc04, type: 3}
 --- !u!114 &269197262 stripped
@@ -5205,6 +5235,21 @@ PrefabInstance:
         type: 3}
       propertyPath: overrideName
       value: Stele
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069258825784343083, guid: 9bdb839d050f59549b3bb793f61d5f65,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069258825784343083, guid: 9bdb839d050f59549b3bb793f61d5f65,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stela2Finished"] == true
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939087885754860102, guid: 9bdb839d050f59549b3bb793f61d5f65,
+        type: 3}
+      propertyPath: luaCode
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5939087885754860102, guid: 9bdb839d050f59549b3bb793f61d5f65,
         type: 3}
@@ -8454,6 +8499,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 694484253427057200, guid: bfa5d6efe2fa67f4b8bd626bb373a3d4,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 694484253427057200, guid: bfa5d6efe2fa67f4b8bd626bb373a3d4,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stela4Finished"] == true
+      objectReference: {fileID: 0}
     - target: {fileID: 2792659508216695083, guid: bfa5d6efe2fa67f4b8bd626bb373a3d4,
         type: 3}
       propertyPath: m_RootOrder
@@ -8518,6 +8573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: overrideName
       value: Stele
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939087885754860102, guid: bfa5d6efe2fa67f4b8bd626bb373a3d4,
+        type: 3}
+      propertyPath: luaCode
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5939087885754860102, guid: bfa5d6efe2fa67f4b8bd626bb373a3d4,
         type: 3}
@@ -11681,6 +11741,21 @@ PrefabInstance:
       propertyPath: overrideName
       value: Stele
       objectReference: {fileID: 0}
+    - target: {fileID: 3692026065064337034, guid: 8d55836251acf67429c4cd5057aca6c5,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3692026065064337034, guid: 8d55836251acf67429c4cd5057aca6c5,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stela1Finished"] == true
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939087885754860102, guid: 8d55836251acf67429c4cd5057aca6c5,
+        type: 3}
+      propertyPath: luaCode
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5939087885754860102, guid: 8d55836251acf67429c4cd5057aca6c5,
         type: 3}
       propertyPath: conversationActor
@@ -13620,6 +13695,10 @@ PrefabInstance:
       propertyPath: displaySettings.dialogueUI
       value: 
       objectReference: {fileID: 614765746}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.continueButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.requireContinueOnLastLine
       value: 1
@@ -19155,8 +19234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ee87bd0da4940478e8de704da839e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text1: {fileID: 377875338}
-  text2: {fileID: 1011350914}
+  texts: []
 --- !u!1001 &2010991149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20715,6 +20793,16 @@ PrefabInstance:
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 1502456608}
+    - target: {fileID: 6675192920540574354, guid: 823eedc4408610c4faa048dd274c78cd,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675192920540574354, guid: 823eedc4408610c4faa048dd274c78cd,
+        type: 3}
+      propertyPath: condition.luaConditions.Array.data[0]
+      value: Variable["Stela3Finished"] == true
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 823eedc4408610c4faa048dd274c78cd, type: 3}
 --- !u!114 &2114611289 stripped

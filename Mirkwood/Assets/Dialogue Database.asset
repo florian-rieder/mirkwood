@@ -187,7 +187,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -201,7 +201,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -215,7 +215,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -229,7 +229,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -243,7 +243,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -257,7 +257,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -784,7 +784,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Stela5Finished"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -845,7 +845,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.97
   - id: 3
     fields:
     - title: Title
@@ -1047,7 +1047,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Stela1Active"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1107,8 +1107,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 120.04767, y: 26.872284}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 134.60085, y: 31.021214}
+    canvasZoom: 1
   - id: 4
     fields:
     - title: Title
@@ -1366,7 +1366,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Stela6Finished"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1629,7 +1629,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Stela2Finished"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1894,7 +1894,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Stela4Finished"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2103,7 +2103,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["Stela3Active"] == true
-      userScript: 
+      userScript: Variable["Stela3Finished"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []

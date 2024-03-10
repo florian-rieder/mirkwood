@@ -7,23 +7,20 @@ using Cysharp.Threading.Tasks;
 
 public class EndCards : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup text1;
-    [SerializeField] private CanvasGroup text2;
+    [SerializeField] private List<CanvasGroup> texts;
 
 
     public async UniTask LaunchEndCards(){
         await UniTask.Delay(TimeSpan.FromSeconds(2), ignoreTimeScale: false);
 
-        await FadeCanvasGroup(text1, 0f, 1f, 1f);
+        foreach (var text in texts)
+        {
+            await FadeCanvasGroup(text, 0f, 1f, 1f);
 
-        await UniTask.Delay(TimeSpan.FromSeconds(4), ignoreTimeScale: false);
+            await UniTask.Delay(TimeSpan.FromSeconds(4), ignoreTimeScale: false);
 
-        await FadeCanvasGroup(text1, 1f, 0f, 1f);
-        await FadeCanvasGroup(text2, 0f, 1f, 1f);
-
-        await UniTask.Delay(TimeSpan.FromSeconds(4), ignoreTimeScale: false);
-
-        await FadeCanvasGroup(text2, 1f, 0f, 1f);
+            await FadeCanvasGroup(text, 1f, 0f, 1f);
+        }
 
         await UniTask.Delay(TimeSpan.FromSeconds(2), ignoreTimeScale: false);
 
