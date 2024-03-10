@@ -12,7 +12,7 @@ public class Stela : MonoBehaviour
     public bool Active { get => this.active; }
 
     private bool collected = false;
-    public bool Collected  { get => this.collected; }
+    public bool Collected { get => this.collected; }
 
     [SerializeField] private string variableName = "Stela1Active";
 
@@ -82,7 +82,7 @@ public class Stela : MonoBehaviour
         MusicController.Instance.Crossfade();
 
         StelaManager.Instance.ActivateNextStela();
-        
+
         await FadeShimmer();
 
         var vanishAudio = Instantiate(vanishAudioPrefab).GetComponent<AudioSource>();
@@ -99,7 +99,7 @@ public class Stela : MonoBehaviour
 
         await Ease3.GoScaleTo(this, Vector3.zero, 1.6f, null, null, EaseType.ExpoIn);
 
-        
+
         gameObject.SetActive(false);
     }
 
