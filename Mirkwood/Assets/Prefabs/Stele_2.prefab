@@ -831,8 +831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variableName: Stela2Active
   startIntensity: 0
-  endIntensity: 5
-  duration: 5
+  endIntensity: 7
+  duration: 10
   shimmerAudio: {fileID: 1402931651783564486}
   vanishAudioPrefab: {fileID: 454212140215741731, guid: 2a1eda6f3a9b9a742bdb548c4704ee83,
     type: 3}
