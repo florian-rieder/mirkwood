@@ -6,11 +6,12 @@ public class MusicController : MonoBehaviour
 {
     public AudioSource introMusic;
     public AudioSource bodyMusic;
+    public AudioSource outroMusic;
 
     public float crossfadeDuration = 2.0f;
 
     private bool crossfading = false;
-    private bool crossfaded = false; // Have we already switched to the main body of the music ?
+    private bool crossfadedBody = false; // Have we already switched to the main body of the music ?
 
     // Static instance of the singleton
     public static MusicController Instance;
@@ -40,9 +41,17 @@ public class MusicController : MonoBehaviour
 
     public void Crossfade()
     {
-        if (!crossfaded && !crossfading)
+        if (!crossfadedBody && !crossfading)
         {
             StartCoroutine(DoCrossfade());
+        }
+    }
+
+    public void CrossfadeOutro()
+    {
+        if (!crossfading)
+        {
+            StartCoroutine(DoCrossfadeOutro());
         }
     }
 
@@ -68,6 +77,30 @@ public class MusicController : MonoBehaviour
         introMusic.Stop();
 
         crossfading = false;
-        crossfaded = true;
+        crossfadedBody = true;
+    }
+
+    IEnumerator DoCrossfadeOutro()
+    {
+        crossfading = true;
+
+        float timer = 0;
+        float outroVolume = introMusic.volume;
+        float bodyVolume = bodyMusic.volume;
+
+        outroMusic.Play(); // Start playing body music before fading in
+
+        while (timer < crossfadeDuration)
+        {
+            float t = timer / crossfadeDuration;
+            outroMusic.volume = Mathf.Pow(10, Mathf.Lerp(Mathf.Log10(0.001f), Mathf.Log10(outroVolume), t));
+            bodyMusic.volume = Mathf.Pow(10, Mathf.Lerp(Mathf.Log10(bodyVolume), Mathf.Log10(0.001f), t));
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        bodyMusic.Stop();
+
+        crossfading = false;
     }
 }

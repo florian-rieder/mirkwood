@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 public class CanvasFader : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
-    public float fadeDuration = 1f;
+    public float fadeDuration = 5f;
 
     [SerializeField] private EndCards endCards;
 
@@ -19,6 +19,8 @@ public class CanvasFader : MonoBehaviour
         {
             await FadeCanvasGroup(canvasGroup, canvasGroup.alpha, 1f, fadeDuration);
         }
+
+        MusicController.Instance.CrossfadeOutro();
 
         await endCards.LaunchEndCards();
     }

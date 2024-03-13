@@ -7,7 +7,8 @@ public class WalkingSounds : MonoBehaviour
 
     private CharacterController characterController;
     private float lastStepTime;
-    private float stepInterval = 0.4f; // Adjust this according to your preference
+    private float minStepInterval = 0.1f; // Minimum step interval
+    private float maxStepInterval = 1.0f; // Maximum step interval
     private float minPitch = 0.8f;
     private float maxPitch = 1.2f;
 
@@ -20,10 +21,16 @@ public class WalkingSounds : MonoBehaviour
 
     private void Update()
     {
-        if (characterController.isGrounded && characterController.velocity.magnitude > 0.5 && Time.time > lastStepTime + stepInterval)
+        if (characterController.isGrounded && characterController.velocity.magnitude > 0.5)
         {
-            PlayFootstepSound();
-            lastStepTime = Time.time;
+            // Calculate step interval based on velocity
+            float stepInterval = Mathf.Lerp(maxStepInterval, minStepInterval, characterController.velocity.magnitude / 10f);
+
+            if (Time.time > lastStepTime + stepInterval)
+            {
+                PlayFootstepSound();
+                lastStepTime = Time.time;
+            }
         }
     }
 

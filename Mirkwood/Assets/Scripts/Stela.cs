@@ -24,7 +24,7 @@ public class Stela : MonoBehaviour
     [SerializeField] private AudioSource shimmerAudio;
     [SerializeField] private GameObject vanishAudioPrefab;
     private bool fading = false;
-    float fadeDuration = 0.5f;
+    float fadeDuration = 3.0f;
 
 
     Renderer rend;
@@ -83,7 +83,7 @@ public class Stela : MonoBehaviour
 
         StelaManager.Instance.ActivateNextStela();
 
-        await FadeShimmer();
+        StartCoroutine(FadeShimmer());
 
         var vanishAudio = Instantiate(vanishAudioPrefab).GetComponent<AudioSource>();
         Vector3 currPos = transform.position;
