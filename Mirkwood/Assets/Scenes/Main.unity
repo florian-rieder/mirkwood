@@ -29910,7 +29910,7 @@ PrefabInstance:
     - target: {fileID: 4898126536696550176, guid: 0cd3d2875a930df46bf75e047ff9a10a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.022
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 4898126536696550176, guid: 0cd3d2875a930df46bf75e047ff9a10a,
         type: 3}
@@ -35480,6 +35480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDistance: 3
+  _input: {fileID: 0}
+  focusedInteractable: {fileID: 0}
 --- !u!114 &1502456615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39270,7 +39272,7 @@ PrefabInstance:
     - target: {fileID: 3386040995109641802, guid: d6d7220bd7c68cd4f92a327b62b09af4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.771307
+      value: 0.601
       objectReference: {fileID: 0}
     - target: {fileID: 3386040995109641802, guid: d6d7220bd7c68cd4f92a327b62b09af4,
         type: 3}
@@ -41462,7 +41464,7 @@ PrefabInstance:
     - target: {fileID: 8321319363960323203, guid: 9f910588d79354346adb3f0935950078,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6047173
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 8321319363960323203, guid: 9f910588d79354346adb3f0935950078,
         type: 3}
@@ -42184,7 +42186,7 @@ PrefabInstance:
     - target: {fileID: 3386040995109641802, guid: d6d7220bd7c68cd4f92a327b62b09af4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1537819
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 3386040995109641802, guid: d6d7220bd7c68cd4f92a327b62b09af4,
         type: 3}
